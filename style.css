@@ -1,0 +1,7 @@
+.input-field { @apply w-full px-4 py-3 rounded-lg border border-slate-200 outline-none focus:ring-2 focus:ring-indigo-400 transition; }
+.btn-primary { @apply w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg shadow-lg transform active:scale-95 transition; }
+.nav-item { @apply flex items-center p-3 rounded-xl text-slate-600 hover:bg-slate-50 transition; }
+.nav-item.active { @apply bg-indigo-600 text-white shadow-md shadow-indigo-100; }
+.nav-label { @apply text-xs font-bold text-slate-400 uppercase px-2 tracking-wider; }
+.dot { @apply w-2 h-2 rounded-full; }
+.logout-btn { @apply flex items-center p-3 text-red-500 hover:bg-red-50 rounded-xl transition w-full; }

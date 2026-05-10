@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Dashboard Pengurus</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 flex min-h-screen">
+    <div id="app" class="flex w-full">
+        <aside class="w-64 bg-white border-r border-slate-200 flex flex-col">
+            <header class="p-6 border-b text-xl font-black text-indigo-600 italic">SKIDIPAPAP</header>
+            <nav class="flex-1 p-4 space-y-2">
+                <h2 class="nav-label">Main Menu</h2>
+                <a href="index.html" class="nav-item active"><i class="fas fa-home mr-3"></i> Beranda</a>
+                <a href="timeline.html" class="nav-item"><i class="fas fa-calendar-alt mr-3"></i> Timeline Aktivitas</a>
+                <h2 class="nav-label mt-6">Aktivitas Pengurus</h2>
+                <button class="nav-item"><span class="dot bg-blue-400 mr-3"></span> PSDM-Akademik</button>
+                <button class="nav-item"><span class="dot bg-purple-400 mr-3"></span> PSDM-Non Akademik</button>
+            </nav>
+            <footer class="p-4 border-t">
+                <a href="login.html" class="logout-btn"><i class="fas fa-sign-out-alt mr-3"></i> Log Out</a>
+            </footer>
+        </aside>
+
+        <main class="flex-1 overflow-y-auto">
+            <header class="bg-white border-b px-8 py-4 flex justify-between items-center sticky top-0 z-10">
+                <h1 class="text-xl font-bold text-slate-800">Beranda</h1>
+                <nav class="flex space-x-6 text-sm font-medium text-slate-500">
+                    <a href="index.html" class="text-indigo-600">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact Us</a>
+                </nav>
+            </header>
+            <section class="p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <article v-for="n in 3" class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                    <h3 class="font-bold text-slate-800 text-lg">Aktivitas Pengurus</h3>
+                    <p class="text-slate-500 text-sm mt-2">Ringkasan aktivitas departemen.</p>
+                </article>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
