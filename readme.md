@@ -1,4 +1,4 @@
-# 🍛 Padang Legenda - Website Parallax & Slider
+# 🍛 Website Parallax & Slider
 
 Website landing page interaktif untuk Rumah Makan **Padang Legenda**. Proyek ini menggunakan arsitektur efek visual 3D Parallax untuk bagian *Hero Banner* dan fitur *Horizontal Slider Carousel* untuk menampilkan menu unggulan (Top Picks). Website ini dikembangkan menggunakan **Tailwind CSS v4** dan **Vite**.
 
@@ -26,7 +26,7 @@ Jika Anda ingin menambahkan menu makanan baru (seperti rendang, gulai, ayam pop,
 
 Untuk mencegah rusaknya fungsi efek visual dan slider saat proyek ini dikembangkan secara berkelanjutan, patuhi aturan penamaan kelas berikut:
 
-1. **Efek Parallax Banner (`.layer-pembungkus-konten`)**
+1. **Efek Parallax Banner (`herro-banner`)**
    Jika halaman baru yang Anda buat juga mengimplementasikan efek parallax pada bagian atasnya, elemen pembungkus terluar wajib memiliki kelas `layer-pembungkus-konten` untuk mengaktifkan ruang 3D browser, sedangkan aset gambarnya dibungkus dengan kelas `layer-bg`.
 
 2. **Kestabilan Posisi Konten (`.layer-foreground`)**
