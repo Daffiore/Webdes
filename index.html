@@ -1,48 +1,177 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda - Dashboard Pengurus</title>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Website Parallax</title>
+    <link rel="stylesheet" href="/src/style.css">
 </head>
-<body class="bg-slate-50 flex min-h-screen">
-    <div id="app" class="flex w-full">
-        <aside class="w-64 bg-white border-r border-slate-200 flex flex-col">
-            <header class="p-6 border-b text-xl font-black text-indigo-600 italic">SKIDIPAPAP</header>
-            <nav class="flex-1 p-4 space-y-2">
-                <h2 class="nav-label">Main Menu</h2>
-                <a href="index.html" class="nav-item active"><i class="fas fa-home mr-3"></i> Beranda</a>
-                <a href="timeline.html" class="nav-item"><i class="fas fa-calendar-alt mr-3"></i> Timeline Aktivitas</a>
-                <h2 class="nav-label mt-6">Aktivitas Pengurus</h2>
-                <button class="nav-item"><span class="dot bg-blue-400 mr-3"></span> PSDM-Akademik</button>
-                <button class="nav-item"><span class="dot bg-purple-400 mr-3"></span> PSDM-Non Akademik</button>
-            </nav>
-            <footer class="p-4 border-t">
-                <a href="login.html" class="logout-btn"><i class="fas fa-sign-out-alt mr-3"></i> Log Out</a>
-            </footer>
-        </aside>
 
-        <main class="flex-1 overflow-y-auto">
-            <header class="bg-white border-b px-8 py-4 flex justify-between items-center sticky top-0 z-10">
-                <h1 class="text-xl font-bold text-slate-800">Beranda</h1>
-                <nav class="flex space-x-6 text-sm font-medium text-slate-500">
-                    <a href="index.html" class="text-indigo-600">Home</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Contact Us</a>
-                </nav>
-            </header>
-            <section class="p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-                <article v-for="n in 3" class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-                    <h3 class="font-bold text-slate-800 text-lg">Aktivitas Pengurus</h3>
-                    <p class="text-slate-500 text-sm mt-2">Ringkasan aktivitas departemen.</p>
-                </article>
-            </section>
+<body class="bg-black m-0 p-0 overflow-hidden font-sans text-white">
+
+    <div class="parallax-wrapper">
+        
+        <nav class="top-6 left-1/2 z-50 fixed flex justify-between items-center bg-white/90 shadow-lg backdrop-blur-md px-6 py-3 rounded-full w-[90%] max-w-5xl text-black -translate-x-1/2 navigasi-wadah">
+            <div class="bg-black rounded-full w-8 h-8 navigasi-logo"></div>
+            <div class="flex gap-6 font-semibold text-sm navigasi-menu">
+                <a href="#" class="hover:opacity-70 transition-opacity">Home</a>
+                <a href="#Top-pick" class="hover:opacity-70 transition-opacity">Top Pick's</a>
+                <a href="#footer" class="hover:opacity-70 transition-opacity">About Us</a>
+            </div>
+        </nav>
+
+        <header class="flex items-center pt-16 min-h-screen bagian-banner herro-banner">
+            <div class="banner-latar-belakang layer-bg">
+                <img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?q=80&w=1920"
+                    class="brightness-[0.25] w-full h-full object-cover" alt="Latar Belakang Rumah Makan">
+            </div>
+            
+            <div class="flex flex-col justify-center mx-auto px-8 md:px-16 banner-konten layer-foreground container">
+                <h1 class="mb-2 font-light text-white/90 text-4xl md:text-6xl tracking-wide banner-judul">Title</h1>
+                <h2 class="mb-6 font-bold text-white text-5xl md:text-7xl tracking-tight banner-slogan">Slogan Apa</h2>
+                <p class="mb-8 max-w-md text-gray-300 text-lg leading-relaxed banner-deskripsi">
+                    Entah mau di isi apa. pokoknya deskripsi singkat aja. sampe 4-5 baris. kalau ga ya 3 baris aja boleh.
+                </p>
+                <div>
+                    <button class="bg-white hover:bg-gray-200 shadow-md px-8 py-2.5 rounded-full font-bold text-black text-sm tracking-wider transition cursor-pointer banner-tombol-menu">
+                        MENU
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main id="Top-pick" class="z-10 relative flex flex-col justify-center bg-black py-32 min-h-screen overflow-hidden text-white bagian-menu-unggulan">
+            
+            <div class="hidden md:block top-20 -left-20 absolute border-[12px] border-emerald-900/30 rounded-full w-80 h-80 overflow-hidden ornamen-kiri-atas">
+                <img src="https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?q=80&w=500"
+                    class="brightness-90 w-full h-full object-cover scale-110" alt="Makanan Ornamen Kiri" />
+            </div>
+            <div class="top-0 -left-40 red-glow-left absolute w-[500px] h-[500px] pointer-events-none cahaya-merah-kiri"></div>
+
+            <div class="hidden md:block top-40 -right-16 absolute rounded-full w-64 h-64 overflow-hidden ornamen-kanan-tengah">
+                <div class="red-glow-right z-0 absolute inset-0 scale-150 cahaya-merah-kanan"></div>
+                <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?q=80&w=500"
+                    class="z-10 relative p-4 rounded-full w-full h-full object-cover" alt="Makanan Ornamen Kanan" />
+            </div>
+
+            <div class="z-10 relative mb-16 text-center menu-unggulan-header">
+                <h2 class="font-serif font-bold text-4xl md:text-5xl tracking-wide menu-unggulan-judul">Top Pick's</h2>
+            </div>
+
+            <div class="z-10 relative mx-auto px-12 w-full max-w-5xl slider-bingkai-pembungkus">
+                
+                <button id="prev-btn"
+                    class="top-1/2 left-2 z-20 absolute flex justify-center items-center bg-red-700 hover:bg-red-800 shadow-md rounded-full w-10 h-10 font-bold text-white -translate-y-1/2 cursor-pointer select-none slider-tombol-panah">
+                    &#8592;
+                </button>
+
+                <div id="slider-track"
+                    class="flex gap-6 py-4 overflow-x-auto scroll-smooth snap-mandatory snap-x slider-jalur-lintasan no-scrollbar">
+
+                    <div class="flex flex-col justify-between bg-white shadow-2xl p-5 rounded-3xl min-w-[280px] md:min-w-[300px] text-black hover:scale-105 transition-transform duration-300 snap-center kartu-makanan">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?q=80&w=400"
+                                class="mb-4 rounded-2xl w-full h-48 object-cover kartu-makanan-gambar" alt="Gambar Gulai">
+                            <h3 class="font-bold text-xl kartu-makanan-nama">Makanan 1</h3>
+                            <div class="my-1 font-bold text-amber-500 text-sm kartu-makanan-nilai">&#9733; 4.5</div>
+                            <p class="text-gray-600 text-xs leading-relaxed kartu-makanan-deskripsi">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque iste consequatur hic ducimus, culpa repudiandae excepturi dolorum est iure. Impedit sint corrupti sapiente! Sit, velit tenetur? Sit eius distinctio harum!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col justify-between bg-white shadow-2xl p-5 rounded-3xl min-w-[280px] md:min-w-[300px] text-black hover:scale-105 transition-transform duration-300 snap-center kartu-makanan">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?q=80&w=400"
+                                class="mb-4 rounded-2xl w-full h-48 object-cover kartu-makanan-gambar" alt="Gambar Rendang">
+                            <h3 class="font-bold text-xl kartu-makanan-nama">Makanan 2</h3>
+                            <div class="my-1 font-bold text-amber-500 text-sm kartu-makanan-nilai">&#9733; 4.7</div>
+                            <p class="text-gray-600 text-xs leading-relaxed kartu-makanan-deskripsi">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, fuga ab. Suscipit velit consequuntur perspiciatis veniam optio molestias officia minus deserunt et mollitia, quis possimus ut qui sunt, commodi nobis!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col justify-between bg-white shadow-2xl p-5 rounded-3xl min-w-[280px] md:min-w-[300px] text-black hover:scale-105 transition-transform duration-300 snap-center kartu-makanan">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?q=80&w=400"
+                                class="mb-4 rounded-2xl w-full h-48 object-cover kartu-makanan-gambar" alt="Gambar Ayam Pop">
+                            <h3 class="font-bold text-xl kartu-makanan-nama">Makanan 3</h3>
+                            <div class="my-1 font-bold text-amber-500 text-sm kartu-makanan-nilai">&#9733; 4.4</div>
+                            <p class="text-gray-600 text-xs leading-relaxed kartu-makanan-deskripsi">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus doloremque, praesentium ipsa corporis voluptates, alias rerum placeat deleniti voluptate unde facere quo non modi culpa, laborum commodi vitae nihil?
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button id="next-btn"
+                    class="top-1/2 right-2 z-20 absolute flex justify-center items-center bg-red-700 hover:bg-red-800 shadow-md rounded-full w-10 h-10 font-bold text-white -translate-y-1/2 cursor-pointer select-none slider-tombol-panah">
+                    &#8594;
+                </button>
+            </div>
+
+            <div class="z-10 relative mt-16 text-center wadah-tombol-selengkapnya">
+                <button class="inline-flex items-center gap-3 bg-white/90 hover:bg-white shadow-md px-6 py-2.5 rounded-full font-medium text-black text-sm transition cursor-pointer tombol-selengkapnya">
+                    Lihat lebih banyak
+                    <span class="flex justify-center items-center bg-red-700 rounded-full w-6 h-6 font-bold text-white text-lg ikon-plus-merah">+</span>
+                </button>
+            </div>
+
+            <div class="hidden lg:block bottom-6 left-24 absolute border-8 border-amber-500/20 rounded-full w-28 h-28 overflow-hidden ornamen-kiri-bawah">
+                <img src="https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?q=80&w=300"
+                    class="w-full h-full object-cover" alt="Ornamen Bulat Bawah" />
+            </div>
+            <div class="hidden md:block -right-24 -bottom-20 absolute border-[16px] border-white/10 rounded-full w-80 h-80 overflow-hidden ornamen-kanan-bawah-pojok">
+                <img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?q=80&w=600"
+                    class="w-full h-full object-cover scale-110" alt="Ornamen Bulat Pojok" />
+            </div>
         </main>
+
+        <footer id="footer" class="z-10 relative bg-[#d1d1d1] px-8 md:px-24 py-16 text-gray-900 bagian-kaki-halaman">
+            <div class="gap-12 grid grid-cols-1 md:grid-cols-2 mx-auto kaki-halaman-wadah container">
+                
+                <div class="kaki-halaman-identitas">
+                    <h3 class="mb-4 font-serif font-bold text-2xl kaki-halaman-nama-brand">Padang Legenda</h3>
+                    <p class="max-w-md text-gray-700 text-sm leading-relaxed kaki-halaman-deskripsi-brand">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis perferendis ullam repellendus ab quidem, fugiat deleniti alias molestias veniam dignissimos, impedit nam quia cum libero. Aperiam amet saepe alias repellendus?
+                    </p>
+                </div>
+                
+                <div class="flex flex-col justify-between text-gray-800 text-sm md:text-right kaki-halaman-kontak">
+                    <p class="font-medium leading-relaxed kaki-halaman-alamat">
+                        Jl. Wakwaw No. 18, Cipinang Cempedak,<br>
+                        Jakarta Timur, 7777 | Fax 1000(0000)
+                    </p>
+
+                    <div class="md:justify-items-end gap-4 grid grid-cols-2 mt-8 md:mt-0 md:ml-auto max-w-sm text-left sosial-media-kisi">
+                        <div class="flex items-center gap-3 hover:opacity-80 cursor-pointer sosial-media-item">
+                            <span class="inline-block bg-[#4a2822] rounded-full w-6 h-6 sosial-media-bulatan"></span> 
+                            <span class="font-semibold text-xs sosial-media-label">Instagram</span>
+                        </div>
+                        <div class="flex items-center gap-3 hover:opacity-80 cursor-pointer social-media-item">
+                            <span class="inline-block bg-[#4a2822] rounded-full w-6 h-6 sosial-media-bulatan"></span> 
+                            <span class="font-semibold text-xs sosial-media-label">Facebook</span>
+                        </div>
+                        <div class="flex items-center gap-3 hover:opacity-80 cursor-pointer social-media-item">
+                            <span class="inline-block bg-[#4a2822] rounded-full w-6 h-6 sosial-media-bulatan"></span> 
+                            <span class="font-semibold text-xs sosial-media-label">X/Twitter</span>
+                        </div>
+                        <div class="flex items-center gap-3 hover:opacity-80 cursor-pointer social-media-item">
+                            <span class="inline-block bg-[#4a2822] rounded-full w-6 h-6 sosial-media-bulatan"></span> 
+                            <span class="font-semibold text-xs sosial-media-label">WhatsApp</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
     </div>
-    <script src="app.js"></script>
+
+    <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
