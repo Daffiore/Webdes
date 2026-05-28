@@ -1,48 +1,319 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda - Dashboard Pengurus</title>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Website Kuliner Minang</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-50 flex min-h-screen">
-    <div id="app" class="flex w-full">
-        <aside class="w-64 bg-white border-r border-slate-200 flex flex-col">
-            <header class="p-6 border-b text-xl font-black text-indigo-600 italic">SKIDIPAPAP</header>
-            <nav class="flex-1 p-4 space-y-2">
-                <h2 class="nav-label">Main Menu</h2>
-                <a href="index.html" class="nav-item active"><i class="fas fa-home mr-3"></i> Beranda</a>
-                <a href="timeline.html" class="nav-item"><i class="fas fa-calendar-alt mr-3"></i> Timeline Aktivitas</a>
-                <h2 class="nav-label mt-6">Aktivitas Pengurus</h2>
-                <button class="nav-item"><span class="dot bg-blue-400 mr-3"></span> PSDM-Akademik</button>
-                <button class="nav-item"><span class="dot bg-purple-400 mr-3"></span> PSDM-Non Akademik</button>
-            </nav>
-            <footer class="p-4 border-t">
-                <a href="login.html" class="logout-btn"><i class="fas fa-sign-out-alt mr-3"></i> Log Out</a>
-            </footer>
-        </aside>
 
-        <main class="flex-1 overflow-y-auto">
-            <header class="bg-white border-b px-8 py-4 flex justify-between items-center sticky top-0 z-10">
-                <h1 class="text-xl font-bold text-slate-800">Beranda</h1>
-                <nav class="flex space-x-6 text-sm font-medium text-slate-500">
-                    <a href="index.html" class="text-indigo-600">Home</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Contact Us</a>
-                </nav>
-            </header>
-            <section class="p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-                <article v-for="n in 3" class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-                    <h3 class="font-bold text-slate-800 text-lg">Aktivitas Pengurus</h3>
-                    <p class="text-slate-500 text-sm mt-2">Ringkasan aktivitas departemen.</p>
-                </article>
-            </section>
-        </main>
-    </div>
-    <script src="app.js"></script>
+<body>
+
+    <section class="hero">
+
+        <nav class="navbar navbar-expand-lg custom-navbar">
+
+            <div class="container-fluid">
+
+                <div class="logo"></div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+                    <ul class="navbar-nav ">
+
+                        <li class="nav-item">
+                            <a class="nav-link active-nav" href="#">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active-nav" href="#top-picks">
+                                Top Pick’s
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active-nav" href="#about-section">
+                                About Us
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <div class="hero-content">
+
+            <h1>
+                Cerita Rasa <br>
+                dari Ranah Minang
+            </h1>
+
+            <p>
+                Menjelajahi cita rasa khas Ranah Minang yang kaya akan rempah,
+                tradisi, dan kehangatan dalam setiap sajian.
+                Dari hidangan legendaris hingga kuliner favorit masyarakat
+                Sumatra Barat, kami menghadirkan pengalaman menikmati
+                masakan Minang dengan tampilan yang modern dan penuh cerita.
+            </p>
+
+            <button class="menu-btn">
+                MENU
+            </button>
+
+        </div>
+
+    </section>
+
+    <section class="top-pick" id="top-picks">
+
+        <div class="glow glow1"></div>
+        <div class="glow glow2"></div>
+        <div class="glow glow3"></div>
+        <div class="glow glow4"></div>
+
+        <div class="circle circle1">
+            <img src="img/gulai.png">
+        </div>
+
+        <div class="circle circle2">
+            <img src="img/bubur kampiun.png">
+        </div>
+
+        <div class="circle circle3">
+            <img src="img/gambar2.png">
+        </div>
+
+        <div class="circle circle4">
+            <img src="img/ayam pop.png">
+        </div>
+
+        <h1 class="title">
+            Top Pick’s
+        </h1>
+
+        <div class="carousel-container">
+
+            <div class="food-card side left">
+
+                <img id="leftImage">
+
+            </div>
+
+            <div class="food-card main">
+
+                <img id="mainImage">
+                <button class="slide-arrow left-arrow" onclick="prevSlide()">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+
+                <button class="slide-arrow right-arrow" onclick="nextSlide()">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+                <div class="card-content">
+
+                    <h2 id="mainTitle"></h2>
+                    <div class="rating">
+                        <i class="bi bi-star-fill"></i>
+                        <span id="mainRating"></span>
+                    </div>
+                    <p id="mainDesc"></p>
+
+                </div>
+
+            </div>
+
+            <div class="food-card side right">
+
+                <img id="rightImage">
+
+            </div>
+
+        </div>
+        <button class="detail-btn">
+            <span>
+                Lihat lebih banyak
+            </span>
+            <div class="plus-icon">
+                <i class="bi bi-plus-lg"></i>
+            </div>
+        </button>
+        <section class="about-container" id="about-section">
+
+            <div class="about-left">
+
+                <h1>
+                    Padang Legenda
+                </h1>
+
+                <p>
+                    Menghadirkan cerita rasa khas Minang dalam setiap sajian.
+                    Dari rendang yang kaya rempah hingga sate padang yang
+                    autentik, kami ingin membawa pengalaman kuliner Sumatra Barat
+                    menjadi lebih dekat, hangat, dan penuh kenangan.
+                </p>
+
+                <div class="social-container">
+
+                    <div class="social-item">
+
+                        <div class="social-icon">
+                            <i class="bi bi-instagram"></i>
+                        </div>
+
+                        <span>Instagram</span>
+
+                    </div>
+
+                    <div class="social-item">
+
+                        <div class="social-icon">
+                            <i class="bi bi-facebook"></i>
+                        </div>
+
+                        <span>Facebook</span>
+
+                    </div>
+
+                    <div class="social-item">
+
+                        <div class="social-icon">
+                            <i class="bi bi-twitter-x"></i>
+                        </div>
+
+                        <span>X/Twitter</span>
+
+                    </div>
+
+                    <div class="social-item">
+
+                        <div class="social-icon">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+
+                        <span>WhatsApp</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="about-right">
+
+                <p>
+                    Jl. Wakawaw No. 18, Cipinang Cempedak, <br>
+                    Jakarta Timur, 7777 | Fax 1000(0000)
+                </p>
+
+            </div>
+
+        </section>
+
+    </section>
+
+    <script>
+
+        const foods = [
+
+            {
+                title: "Rendang",
+                rating: " 4.9",
+                desc: "Daging sapi khas Minang dengan rempah yang kaya dan gurih.",
+                image: "img/rendang.jpg"
+            },
+
+            {
+                title: "Sate Padang",
+                rating: " 4.8",
+                desc: "Sate dengan kuah kental khas Padang yang gurih dan pedas.",
+                image: "img/sate padang.jpg",
+            },
+
+            {
+                title: "Dendeng",
+                rating: " 4.8",
+                desc: "Daging tipis berbumbu yang dikeringkan dan digoreng dengan rasa gurih khas.",
+                image: "img/dendeng.jpeg"
+            }
+
+        ];
+
+        let current = 0;
+
+        function updateCarousel() {
+
+            const left =
+                (current - 1 + foods.length) % foods.length;
+
+            const right =
+                (current + 1) % foods.length;
+
+            document.getElementById("mainImage").src =
+                foods[current].image;
+
+            document.getElementById("mainTitle").innerText =
+                foods[current].title;
+
+            document.getElementById("mainRating").innerText =
+                foods[current].rating;
+
+            document.getElementById("mainDesc").innerText =
+                foods[current].desc;
+
+            document.getElementById("leftImage").src =
+                foods[left].image;
+
+            document.getElementById("rightImage").src =
+                foods[right].image;
+        }
+
+        function nextSlide() {
+
+            current++;
+
+            if (current >= foods.length) {
+                current = 0;
+            }
+
+            updateCarousel();
+        }
+
+        function prevSlide() {
+
+            current--;
+
+            if (current < 0) {
+                current = foods.length - 1;
+            }
+
+            updateCarousel();
+        }
+
+        updateCarousel();
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
