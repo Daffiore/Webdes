@@ -15,7 +15,6 @@ const foods = [
         rating: "⭐ 4.7"
     }
 ];
-
 let current = 0;
 
 // menghindari error null
