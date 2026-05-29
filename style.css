@@ -15,27 +15,21 @@ body {
     color: white;
 }
 
-/* hero */
-.hero {
-    min-height: 100vh;
-
-    background:
-        linear-gradient(to right,
-            rgba(0, 0, 0, 0.95) 50%,
-            rgba(0, 0, 0, 0.6) 70%,
-            rgba(0, 0, 0, 0.5)),
-        url('img/makanan padang.png');
-
-    background-size: cover;
-    background-position: center;
-    padding: 40px 70px;
-
-    position: relative;
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 70px;
+    z-index: 200;
 }
 
 /* navbar */
 .custom-navbar {
-    background: #d9d9d9;
+    background: rgba(255, 255, 255, 0.35); 
+    backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
     max-height: 500px;
     border-radius: 60px;
     padding: 4px 1px;
@@ -61,17 +55,24 @@ body {
     background: #c92b2b;
     border-radius: 25px;
     color: white !important;
-
     transform: scale(1.08);
-
     box-shadow:
         0 0 15px rgba(255, 0, 0, 0.3);
 }
 
+/* hero */
+.hero {
+    position: relative;
+    display: flex;
+    height: 100vh;
+}
 
 .hero-content {
     margin-top: 70px;
     max-width: 850px;
+    padding: 70px 70px;
+    position: relative;
+    z-index: 10;
 }
 
 .hero-content h1 {
@@ -105,19 +106,23 @@ body {
     transform: scale(1.05);
 }
 
+.hero img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
 /* Top picks */
 .top-pick {
     min-height: 100vh;
-
-    background: black;
-
+    background: rgb(31,8,19);
     position: relative;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     overflow: hidden;
     padding: 80px 20px;
     padding-bottom: 0px;
