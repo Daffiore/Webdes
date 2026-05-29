@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Kuliner Minang</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.tailwind.css">
+</head>
+
+<body>
+    <header id="header" class="fixed top-0 left-0 w-full py-[20px] px-[70px] z-[999]">
+        <nav class="flex justify-between items-center bg-[#d9d9d9]/30 backdrop-blur-md border border-white/30 shadow-lg px-10 py-2.5 rounded-full w-[95%]">
+            <div class="bg-black rounded-full w-11 h-11"></div>
+            <ul class="flex flex-row items-center gap-2.5 m-0 p-0 list-none">
+                <li class="nav-item">
+                    <a class="hover:bg-[#c92b2b] px-5 py-2 rounded-full font-semibold text-black hover:text-white text-base hover:scale-105 transition-all"
+                        href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="hover:bg-[#c92b2b] px-5 py-2 rounded-full font-semibold text-black hover:text-white text-base hover:scale-105 transition-all"
+                        href="#top-picks">
+                        Top Pick’s
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="hover:bg-[#c92b2b] px-5 py-2 rounded-full font-semibold text-black hover:text-white text-base hover:scale-105 transition-all"
+                        href="#about-section">
+                        About Us
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero" id="home">
+        <img src="img/sky.png" id="vek5">
+        <img src="img/moon.png" id="vek4">
+        <img src="img/back 1.png" id="vek3">
+        <img src="img/back 2.png" id="vek2">
+        <img src="img/back 3.png" id="vek1">
+        <div class="hero-content">
+            <h1 id="judul">
+                Cerita Rasa <br>
+                dari Tanah Minang
+            </h1>
+            <p>
+                Menjelajahi cita rasa khas Ranah Minang yang kaya akan rempah,
+                tradisi, dan kehangatan dalam setiap sajian.
+                Dari hidangan legendaris hingga kuliner favorit masyarakat
+                Sumatra Barat, kami menghadirkan pengalaman menikmati
+                masakan Minang dengan tampilan yang modern dan penuh cerita.
+            </p>
+            <button class="menu-btn">
+                MENU
+            </button>
+        </div>
+    </section>
+
+    <section class="top-pick" id="top-picks">
+        <div class="glow glow1"></div>
+        <div class="glow glow2"></div>
+        <div class="glow glow3"></div>
+        <div class="glow glow4"></div>
+        <div class="circle circle1">
+            <img src="img/gulai.png">
+        </div>
+        <div class="circle circle2">
+            <img src="img/bubur kampiun.png">
+        </div>
+        <div class="circle circle3">
+            <img src="img/gambar2.png">
+        </div>
+        <div class="circle circle4">
+            <img src="img/ayam pop.png">
+        </div>
+        <h1 class="title">
+            Top Pick’s
+        </h1>
+        <div class="carousel-container">
+            <div class="left food-card side">
+                <img id="leftImage">
+            </div>
+            <div class="food-card main">
+                <img id="mainImage">
+                <button class="left-arrow slide-arrow" onclick="prevSlide()">
+                    <i class="bi-chevron-left bi"></i>
+                </button>
+                <button class="right-arrow slide-arrow" onclick="nextSlide()">
+                    <i class="bi-chevron-right bi"></i>
+                </button>
+                <div class="card-content">
+                    <h2 id="mainTitle"></h2>
+                    <div class="rating">
+                        <i class="bi bi-star-fill"></i>
+                        <span id="mainRating"></span>
+                    </div>
+                    <p id="mainDesc"></p>
+                </div>
+            </div>
+            <div class="right food-card side">
+                <img id="rightImage">
+            </div>
+        </div>
+        <button class="detail-btn">
+            <span>
+                Lihat lebih banyak
+            </span>
+            <div class="plus-icon">
+                <i class="bi bi-plus-lg"></i>
+            </div>
+        </button>
+        <section class="about-container" id="about-section">
+            <div class="about-left">
+                <h1>
+                    Padang Legenda
+                </h1>
+                <p>
+                    Menghadirkan cerita rasa khas Minang dalam setiap sajian.
+                    Dari rendang yang kaya rempah hingga sate padang yang
+                    autentik, kami ingin membawa pengalaman kuliner Sumatra Barat
+                    menjadi lebih dekat, hangat, dan penuh kenangan.
+                </p>
+                <div class="social-container">
+                    <div class="social-item">
+                        <div class="social-icon">
+                            <i class="bi bi-instagram"></i>
+                        </div>
+                        <span>Instagram</span>
+                    </div>
+                    <div class="social-item">
+                        <div class="social-icon">
+                            <i class="bi bi-facebook"></i>
+                        </div>
+                        <span>Facebook</span>
+                    </div>
+                    <div class="social-item">
+                        <div class="social-icon">
+                            <i class="bi bi-twitter-x"></i>
+                        </div>
+                        <span>X/Twitter</span>
+                    </div>
+                    <div class="social-item">
+                        <div class="social-icon">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                        <span>WhatsApp</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-right">
+                <p>
+                    Jl. Wakawaw No. 18, Cipinang Cempedak, <br>
+                    Jakarta Timur, 7777 | Fax 1000(0000)
+                </p>
+            </div>
+        </section>
+    </section>
+    
+    <script src="./src/main.js"></script>
+</body>
+
+</html>
