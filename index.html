@@ -7,20 +7,15 @@
     <title>Website Kuliner Minang</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/style.tailwind.css">
 </head>
 
 <body>
-
-    <header id="header" class="flex justify-center w-full">
-        <nav class="top-5 z-50 fixed flex justify-between items-center bg-[#d9d9d9] px-10 py-2.5 rounded-full w-[95%]">
-
+    <header id="header" class="fixed top-0 left-0 w-full py-[20px] px-[70px] z-[999]">
+        <nav class="flex justify-between items-center bg-[#d9d9d9]/30 backdrop-blur-md border border-white/30 shadow-lg px-10 py-2.5 rounded-full w-[95%]">
             <div class="bg-black rounded-full w-11 h-11"></div>
-
             <ul class="flex flex-row items-center gap-2.5 m-0 p-0 list-none">
-
                 <li class="nav-item">
                     <a class="hover:bg-[#c92b2b] px-5 py-2 rounded-full font-semibold text-black hover:text-white text-base hover:scale-105 transition-all"
                         href="#home">
@@ -41,7 +36,6 @@
                         About Us
                     </a>
                 </li>
-
             </ul>
         </nav>
     </header>
@@ -51,7 +45,6 @@
         <img src="img/back 1.png" id="vek3">
         <img src="img/back 2.png" id="vek2">
         <img src="img/back 3.png" id="vek1">
-
         <div class="hero-content">
             <h1 id="judul">
                 Cerita Rasa <br>
@@ -71,69 +64,49 @@
     </section>
 
     <section class="top-pick" id="top-picks">
-
         <div class="glow glow1"></div>
         <div class="glow glow2"></div>
         <div class="glow glow3"></div>
         <div class="glow glow4"></div>
-
         <div class="circle circle1">
             <img src="img/gulai.png">
         </div>
-
         <div class="circle circle2">
             <img src="img/bubur kampiun.png">
         </div>
-
         <div class="circle circle3">
             <img src="img/gambar2.png">
         </div>
-
         <div class="circle circle4">
             <img src="img/ayam pop.png">
         </div>
-
         <h1 class="title">
             Top Pick’s
         </h1>
-
         <div class="carousel-container">
-
             <div class="left food-card side">
-
                 <img id="leftImage">
-
             </div>
-
             <div class="food-card main">
-
                 <img id="mainImage">
                 <button class="left-arrow slide-arrow" onclick="prevSlide()">
                     <i class="bi-chevron-left bi"></i>
                 </button>
-
                 <button class="right-arrow slide-arrow" onclick="nextSlide()">
                     <i class="bi-chevron-right bi"></i>
                 </button>
                 <div class="card-content">
-
                     <h2 id="mainTitle"></h2>
                     <div class="rating">
                         <i class="bi bi-star-fill"></i>
                         <span id="mainRating"></span>
                     </div>
                     <p id="mainDesc"></p>
-
                 </div>
-
             </div>
-
             <div class="right food-card side">
-
                 <img id="rightImage">
-
             </div>
-
         </div>
         <button class="detail-btn">
             <span>
@@ -144,163 +117,52 @@
             </div>
         </button>
         <section class="about-container" id="about-section">
-
             <div class="about-left">
-
                 <h1>
                     Padang Legenda
                 </h1>
-
                 <p>
                     Menghadirkan cerita rasa khas Minang dalam setiap sajian.
                     Dari rendang yang kaya rempah hingga sate padang yang
                     autentik, kami ingin membawa pengalaman kuliner Sumatra Barat
                     menjadi lebih dekat, hangat, dan penuh kenangan.
                 </p>
-
                 <div class="social-container">
-
                     <div class="social-item">
-
                         <div class="social-icon">
                             <i class="bi bi-instagram"></i>
                         </div>
-
                         <span>Instagram</span>
-
                     </div>
-
                     <div class="social-item">
-
                         <div class="social-icon">
                             <i class="bi bi-facebook"></i>
                         </div>
-
                         <span>Facebook</span>
-
                     </div>
-
                     <div class="social-item">
-
                         <div class="social-icon">
                             <i class="bi bi-twitter-x"></i>
                         </div>
-
                         <span>X/Twitter</span>
-
                     </div>
-
                     <div class="social-item">
-
                         <div class="social-icon">
                             <i class="bi bi-whatsapp"></i>
                         </div>
-
                         <span>WhatsApp</span>
-
                     </div>
-
                 </div>
-
             </div>
-
             <div class="about-right">
-
                 <p>
                     Jl. Wakawaw No. 18, Cipinang Cempedak, <br>
                     Jakarta Timur, 7777 | Fax 1000(0000)
                 </p>
-
             </div>
-
         </section>
-
     </section>
-
-    <script>
-
-        const foods = [
-
-            {
-                title: "Rendang",
-                rating: " 4.9",
-                desc: "Daging sapi khas Minang dengan rempah yang kaya dan gurih.",
-                image: "img/rendang.jpg"
-            },
-
-            {
-                title: "Sate Padang",
-                rating: " 4.8",
-                desc: "Sate dengan kuah kental khas Padang yang gurih dan pedas.",
-                image: "img/sate padang.jpg",
-            },
-
-            {
-                title: "Dendeng",
-                rating: " 4.8",
-                desc: "Daging tipis berbumbu yang dikeringkan dan digoreng dengan rasa gurih khas.",
-                image: "img/dendeng.jpeg"
-            }
-
-        ];
-
-        let current = 0;
-
-        function updateCarousel() {
-
-            const left =
-                (current - 1 + foods.length) % foods.length;
-
-            const right =
-                (current + 1) % foods.length;
-
-            document.getElementById("mainImage").src =
-                foods[current].image;
-
-            document.getElementById("mainTitle").innerText =
-                foods[current].title;
-
-            document.getElementById("mainRating").innerText =
-                foods[current].rating;
-
-            document.getElementById("mainDesc").innerText =
-                foods[current].desc;
-
-            document.getElementById("leftImage").src =
-                foods[left].image;
-
-            document.getElementById("rightImage").src =
-                foods[right].image;
-        }
-
-        function nextSlide() {
-
-            current++;
-
-            if (current >= foods.length) {
-                current = 0;
-            }
-
-            updateCarousel();
-        }
-
-        function prevSlide() {
-
-            current--;
-
-            if (current < 0) {
-                current = foods.length - 1;
-            }
-
-            updateCarousel();
-        }
-
-        updateCarousel();
-
-    </script>
-
-    <script type="module" src="/src/main.js"></script>
-
+    
+    <script src="./src/main.js"></script>
 </body>
-
 </html>
