@@ -21,6 +21,7 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 /*2. INTI PARALLAKS */
 .hero {
   min-height: 100vh;
@@ -31,6 +32,7 @@ html {
   z-index: 1;
   overflow: hidden;
 }
+
 .hero img {
   position: absolute;
   top: 0;
@@ -46,23 +48,29 @@ html {
 #vek5 {
   z-index: 1;
 }
+
 #vek4 {
   z-index: 2;
 }
+
 #vek3 {
   z-index: 3;
 }
+
 #vek2 {
   z-index: 4;
 }
+
 #vek1 {
   z-index: 5;
 }
+
 #judul {
   position: relative;
   z-index: 3;
   will-change: margin-top;
 }
+
 .hero-content {
   position: relative;
   color: #ffffff;
@@ -73,6 +81,7 @@ html {
 .menu-btn {
   @apply bg-[#c92b2b];
 }
+
 /* 3. HEADER */
 .custom-navbar {
   background: #d9d9d9;
@@ -89,6 +98,7 @@ html {
   border-radius: 50%;
   background: #000000;
 }
+
 .navbar-nav {
   display: flex;
   flex-direction: row;
@@ -98,6 +108,7 @@ html {
   padding: 0;
   gap: 10px;
 }
+
 .nav-link {
   color: #000000;
   font-size: 16px;
@@ -108,12 +119,14 @@ html {
   text-decoration: none;
   display: inline-block;
 }
+
 .nav-link:hover,
 .active-nav {
   background: #c92b2b;
   color: #ffffff !important;
   transform: scale(1.05);
 }
+
 /*4. HERO CONTENT TYPOGRAPHY & BUTTON*/
 .hero-content {
   margin-top: 60px;
@@ -121,6 +134,7 @@ html {
   position: relative;
   z-index: 10;
 }
+
 .hero-content h1 {
   font-size: 60px;
   line-height: 1.15;
@@ -129,12 +143,14 @@ html {
   color: #ffffff;
   margin-bottom: 24px;
 }
+
 .hero-content p {
   font-size: 15px;
   line-height: 1.8;
   color: #e2e8f0;
   margin-bottom: 30px;
 }
+
 .menu-btn {
   display: inline-block;
   background-color: #ffffff;
@@ -148,6 +164,7 @@ html {
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
+
 .menu-btn:hover {
   transform: scale(1.05);
   background-color: #f8fafc;
@@ -504,7 +521,7 @@ html {
   transition: 0.3s ease;
 }
 
-.slide-arrow:hover ~ .food-card,
+.slide-arrow:hover~.food-card,
 .food-card:has(.slide-arrow:hover) {
   transform: none;
 }
@@ -618,6 +635,98 @@ html {
   padding-top: 80px;
   font-size: 11px;
   font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+}
+
+/* halaman menu */
+
+.menu-page {
+  min-height: 100vh;
+  background:
+    url("/img/background.png");
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: repeat-y;
+
+  padding-bottom: 100px;
+}
+
+.menu-section {
+  width: 85%;
+  margin: 120px auto;
+}
+
+.menu-title {
+  font-size: 70px;
+  font-family: Georgia, serif;
+  color: white;
+  margin-top: 0;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.menu-card {
+  background: #b5adb1;
+  border-radius: 30px;
+  padding: 13px;
+  height: 380px;
+  width: 300px;
+  transition: .3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  transform: translateY(-10px) scale(1.05);
+
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2), 0 0 40px rgba(255, 0, 0, 0.35);
+
+  background: #fff5f5;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+
+  border-radius: 20px;
+}
+
+.menu-card:hover img {
+  transform: scale(1.05);
+}
+
+.menu-card img {
+  transition: 0.4s ease;
+}
+
+.menu-card:hover h2 {
+  color: #c62828;
+}
+
+.menu-content {
+  padding: 10px 5px;
+}
+
+.menu-content h2 {
+  color: black;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.menu-rating {
+  color: black;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.menu-content p {
+  color: #333;
+  font-size: 13px;
   line-height: 1.5;
 }
 
