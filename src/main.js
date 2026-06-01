@@ -1,4 +1,3 @@
-
 let sky = document.getElementById('vek5');
 let moon = document.getElementById('vek4');
 let back3 = document.getElementById('vek3');
